@@ -30,13 +30,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://control-grades-app.herokuapp.com',
   })
 );
 
 app.use(gradeRouter);
 
-app.get('/', (req, res) => {
+app.get('/', (__, res) => {
   res.send('API em execucao');
 });
 
