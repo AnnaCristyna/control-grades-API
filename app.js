@@ -6,6 +6,9 @@ import { gradeRouter } from './routes/gradeRouter.js';
 import { logger } from './config/logger.js';
 import { db } from './models/index.js';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 (async () => {
   try {
     await db.mongoose.connect(db.url, {

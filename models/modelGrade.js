@@ -9,8 +9,8 @@ export default (mongoose) => {
         if (value < 0) throw new Error('Negative Number');
       },
     },
-    lastModified: { type: String, required: false },
+    lastModified: { type: Date, required: false },
   });
-  const gradeModel = mongoose.Model('grades', schema);
+  const gradeModel = mongoose.model('grades', schema);
   return gradeModel;
 };
