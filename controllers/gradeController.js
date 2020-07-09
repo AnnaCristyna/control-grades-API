@@ -29,8 +29,7 @@ const findAll = async (req, res) => {
   var condition = name
     ? { name: { $regex: new RegExp(name), $options: 'i' } }
     : {};
-  console.log(condition);
-  console.log(name);
+
   try {
     const data = await Grades.find(condition);
     logger.info(`GET /grade`);
